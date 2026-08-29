@@ -173,6 +173,9 @@ export function Footer() {
             <Link href="/contact" className="hover:text-slate-400 transition-colors">
               문의하기
             </Link>
+            <Link href="/admin/login" className="text-slate-600 hover:text-sky-400 transition-colors text-[11px]">
+              Admin
+            </Link>
           </div>
         </div>
       </div>
