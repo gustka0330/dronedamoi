@@ -1,0 +1,66 @@
+import { VideoItem } from '@/types';
+
+export const youtubeChannelUrl = 'https://www.youtube.com/@dronedamoi_droneschool/videos';
+
+export const videoItems: VideoItem[] = [
+  {
+    id: 'vid-1',
+    title: '5분 만에 끝내는 초등 드론 조종 기초: 롤, 피치, 요, 스로틀 완전정복',
+    category: '배우는 드론',
+    subCategory: '드론 원리 · 조종 · 안전',
+    duration: '06:24',
+    description: '처음 드론을 만지는 학생과 교사를 위해 4축 모터 작동 원리와 안전한 호버링 비결을 알기 쉽게 설명합니다.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/portfolio-school.jpg',
+  },
+  {
+    id: 'vid-2',
+    title: '2023 FIDA World Championship Class 20 세계대회 우승팀 경기 하이라이트',
+    category: '즐기는 드론',
+    subCategory: '드론축구 · 미션 · 세계대회',
+    duration: '04:15',
+    description: '결승전 짜릿한 역전골의 순간! 학생들과 함께 만든 세계 1위의 감동적인 경기 실황 영상입니다.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/world-championship.jpg',
+  },
+  {
+    id: 'vid-3',
+    title: '초보자도 시네마틱하게! 학교 전경 드론 항공촬영 5대 카메라 무빙',
+    category: '찍는 드론',
+    subCategory: '드론촬영 · 영상제작',
+    duration: '08:40',
+    description: '탑다운 샷부터 틸트업 레빌까지, 학교 홍보 영상에 바로 쓸 수 있는 멋진 무빙 기법을 실습합니다.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/portfolio-media.jpg',
+  },
+  {
+    id: 'vid-4',
+    title: '교실에서 코딩으로 날리는 드론! 엔트리 블록코딩 장애물 자율비행',
+    category: '수업하는 드론',
+    subCategory: '학교수업 · 코딩 · 학생활동',
+    duration: '07:12',
+    description: '순차, 반복, 조건 알고리즘을 활용해 드론이 스스로 게이트를 통과하도록 명령하는 코딩 수업 현장.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/portfolio-coding.jpg',
+  },
+  {
+    id: 'vid-5',
+    title: '선생님을 위한 드론 안전 연수: 리포 배터리 관리와 비상착륙 프로토콜',
+    category: '배우는 드론',
+    subCategory: '교원연수 · 비행안전',
+    duration: '09:30',
+    description: '학교 체육관과 교실에서 안전사고 제로를 달성하기 위한 필수 기체 점검 및 안전 가이드라인.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/portfolio-training.jpg',
+  },
+  {
+    id: 'vid-6',
+    title: '우리 학교 사계절을 하늘에서 담다 — 학생 제작 항공 다큐멘터리',
+    category: '찍는 드론',
+    subCategory: 'PBL 프로젝트 · 학생작품',
+    duration: '05:48',
+    description: '학생들이 직접 스토리보드를 작성하고 촬영·편집하여 완성한 감동적인 학교 이야기.',
+    youtubeUrl: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
+    thumbnail: '/images/portfolio-project.jpg',
+  },
+];
