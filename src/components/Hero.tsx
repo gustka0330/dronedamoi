@@ -25,17 +25,6 @@ export function Hero() {
           />
         </div>
 
-        {/* Hero Ambient Video Player */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/hero.jpg"
-          className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-screen scale-105 pointer-events-none"
-          src="/video/hero.mp4"
-        />
-
         {/* Ambient Gradient Glows */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-blue-600/30 via-sky-500/20 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
