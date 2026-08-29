@@ -56,7 +56,7 @@ export function Footer() {
               {siteConfig.slogan}
             </p>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              11년차 현직 초등학교 교사이자 학생드론교육 전문가 윤현삼.<br />
+              현직 초등학교 교사이자 학생드론교육 전문가 윤현삼.<br />
               교실에서 시작해 세계 정상까지, 아이들의 꿈과 가능성을 드론으로 띄웁니다.
             </p>
 

@@ -6,7 +6,7 @@ import { ImageWithFallback } from './ImageWithFallback';
 
 export function AboutPreview() {
   const highlights = [
-    '11년차 현직 초등학교 교사의 교육과정 전문성',
+    '현직 초등학교 교사의 교육과정 전문성',
     '2023 FIDA World Championship 우승팀 코치 (학생 지도)',
     '학교 안전 수칙 및 100% 무사고 비행 수업 매뉴얼 보유',
     '조종 · 코딩 · 촬영 · 스포츠 · PBL 융합 교육과정 설계',
@@ -32,7 +32,7 @@ export function AboutPreview() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                     fallbackCategory="YOON HYUN SAM"
-                    fallbackTitle="11년차 초등교사 · 드론교육 전문가"
+                    fallbackTitle="현직 초등교사 · 드론교육 전문가"
                     fallbackIcon="award"
                   />
                   {/* Overlay card */}
@@ -74,7 +74,7 @@ export function AboutPreview() {
               </p>
 
               <p className="mt-3 text-base sm:text-lg text-[#475467] leading-relaxed">
-                윤현삼은 11년차 현직 초등교사로서 학교 현장에서 학생들과 직접 호흡하고, 
+                윤현삼은 현직 초등교사로서 학교 현장에서 학생들과 직접 호흡하고, 
                 대회에 도전하며 학생드론교육의 가능성을 확장해 왔습니다.
               </p>
 

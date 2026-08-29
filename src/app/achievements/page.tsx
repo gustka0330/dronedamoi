@@ -8,7 +8,7 @@ import { CTASection } from '@/components/CTASection';
 
 export const metadata: Metadata = {
   title: '도전의 기록 | 2023 FIDA 세계대회 우승팀 코치 및 전국대회 지도 실적',
-  description: '11년차 현직 초등교사 윤현삼의 학생 지도 이력. 2023 1st FIDA World Championship Class 20 세계대회 우승팀 지도, 교육감배 우승, 국토교통부장관배 전국대회 학생팀 지도 기록.',
+  description: '현직 초등교사 윤현삼의 학생 지도 이력. 2023 1st FIDA World Championship Class 20 세계대회 우승팀 지도, 교육감배 우승, 국토교통부장관배 전국대회 학생팀 지도 기록.',
 };
 
 export default function AchievementsPage() {

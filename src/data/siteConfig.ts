@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'DRONEDAMOI DRONE SCHOOL',
   koreanName: '드론다모이 드론스쿨',
   instructor: '윤현삼',
-  instructorRole: '11년차 현직 초등학교 교사 · 학생드론교육 전문가',
+  instructorRole: '현직 초등학교 교사 · 학생드론교육 전문가',
   instructorRoleShort: '초등교사 · 학생드론교육 전문가',
   slogan: '드론으로 꿈과 교육을 실현합니다.',
   subSlogan: '교실에서 시작해 세계무대까지. 아이들의 가능성을 드론으로 띄웁니다.',
@@ -19,11 +19,11 @@ export const siteConfig = {
   },
   stats: [
     {
-      number: '11',
-      unit: 'YEARS',
+      number: '현직',
+      unit: '교사',
       label: '01',
       title: '초등학교 교육 현장',
-      description: '초등 교육과정과 학생 발달을 깊이 이해하는 11년차 현직 교사',
+      description: '초등 교육과정과 학생 발달을 깊이 이해하는 현직 초등교사',
     },
     {
       number: '1st',

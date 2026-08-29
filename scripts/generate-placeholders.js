@@ -9,7 +9,7 @@ if (!fs.existsSync(imagesDir)) {
 
 const placeholders = [
   { name: 'hero.jpg', title: '교실에서 시작해 세계무대까지', category: 'DRONEDAMOI HERO', color1: '#081526', color2: '#1677FF' },
-  { name: 'profile-main.jpg', title: '11년차 초등교사 윤현삼', category: 'ABOUT YOON HYUN SAM', color1: '#0F2744', color2: '#0052CC' },
+  { name: 'profile-main.jpg', title: '현직 초등교사 윤현삼', category: 'ABOUT YOON HYUN SAM', color1: '#0F2744', color2: '#0052CC' },
   { name: 'world-championship.jpg', title: '2023 FIDA World Championship 우승', category: 'WORLD CHAMPION COACH', color1: '#1A0B2E', color2: '#7928CA' },
   { name: 'achievement-2022.jpg', title: '구미시장배 전국대회 첫 도전', category: '2022 ACHIEVEMENT', color1: '#0B2239', color2: '#13547A' },
   { name: 'achievement-2023-world.jpg', title: '국토교통부장관배 및 국가대표 선발전', category: '2023 ACHIEVEMENT', color1: '#081526', color2: '#0070F3' },

@@ -16,7 +16,7 @@ export const pressItems: PressItem[] = [
     organization: '한국일보',
     title: '교실에서 세계 정상으로… 유소년 드론축구팀을 이끈 현직 교사의 도전 스토리',
     date: '2023.12',
-    description: '11년차 초등교사 윤현삼 코치가 학생들과 함께 흘린 땀방울과 실패를 딛고 세계 챔피언에 오르기까지의 생생한 지도 과정과 교육 철학 인터뷰.',
+    description: '현직 초등교사이자 드론교육 전문가 윤현삼 코치가 학생들과 함께 흘린 땀방울과 실패를 딛고 세계 챔피언에 오르기까지의 생생한 지도 과정과 교육 철학 인터뷰.',
     category: '주요 언론',
     image: '/images/achievement-2023-world.jpg',
     badge: '기획 인터뷰',

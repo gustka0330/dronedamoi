@@ -25,6 +25,17 @@ export function Hero() {
           />
         </div>
 
+        {/* Hero Ambient Video Player */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/images/hero.jpg"
+          className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-screen scale-105 pointer-events-none"
+          src="/video/hero.mp4"
+        />
+
         {/* Ambient Gradient Glows */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-blue-600/30 via-sky-500/20 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -77,7 +88,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl sm:max-w-3xl text-balance"
           >
-            <span className="font-semibold text-white">11년차 현직 초등교사이자 학생드론교육 전문가 윤현삼.</span><br className="hidden sm:inline" />
+            <span className="font-semibold text-white">현직 초등교사이자 학생드론교육 전문가 윤현삼.</span><br className="hidden sm:inline" />
             드론의 원리부터 조종 · 촬영 · 코딩 · 드론스포츠 · 프로젝트와 진로교육까지<br className="hidden md:inline" />
             학교 현장에서 직접 설계하고 실천합니다.
           </motion.p>

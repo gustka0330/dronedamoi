@@ -21,7 +21,7 @@ export default function ContactPage() {
     },
     {
       q: '학교 행정 처리에 필요한 기안용 강의계획서 및 서류 지원이 되나요?',
-      a: '11년차 현직 초등교사가 학교 행정 프로세스(K-에듀파인 기안, 성취기준 연계 계획서, 안전 서약서, 강사 이력서 등)를 원스톱으로 지원해 드립니다.',
+      a: '현직 초등교사가 학교 행정 프로세스(K-에듀파인 기안, 성취기준 연계 계획서, 안전 서약서, 강사 이력서 등)를 원스톱으로 지원해 드립니다.',
     },
   ];
 
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-400 uppercase">신뢰와 안전</p>
-                    <p className="text-base font-extrabold text-slate-900 mt-0.5">11년차 현직 초등교사 직접 지도</p>
+                    <p className="text-base font-extrabold text-slate-900 mt-0.5">현직 초등교사 직접 지도</p>
                     <p className="text-xs text-slate-500 mt-0.5">2023 FIDA 세계대회 우승 코치 직강</p>
                   </div>
                 </div>

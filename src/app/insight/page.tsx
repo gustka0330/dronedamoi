@@ -51,7 +51,7 @@ export default function InsightPage() {
           </h1>
 
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed text-balance">
-            11년차 현직 교사가 현장에서 직접 겪고 연구한 수업 설계, 항공 과학 원리,<br className="hidden sm:inline" />
+            현직 교사가 현장에서 직접 겪고 연구한 수업 설계, 항공 과학 원리,<br className="hidden sm:inline" />
             비행 안전 수칙과 학생 미래 진로에 관한 전문 칼럼을 나눕니다.
           </p>
         </div>

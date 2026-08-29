@@ -9,7 +9,7 @@ import { CTASection } from '@/components/CTASection';
 
 export const metadata: Metadata = {
   title: '교육 프로그램 | 초등·중등 드론교육, 코딩, 촬영, 스포츠, 교원연수',
-  description: '11년차 현직 교사가 직접 설계한 학생 중심 드론교육 프로그램. 드론 기초, 드론 코딩, 항공촬영 미디어, 드론축구 스포츠, 교과연계 PBL, 교원 직무연수 안내.',
+  description: '현직 교사가 직접 설계한 학생 중심 드론교육 프로그램. 드론 기초, 드론 코딩, 항공촬영 미디어, 드론축구 스포츠, 교과연계 PBL, 교원 직무연수 안내.',
 };
 
 export default function ProgramPage() {

@@ -5,8 +5,8 @@ import { ImageWithFallback } from '@/components/ImageWithFallback';
 import { CTASection } from '@/components/CTASection';
 
 export const metadata: Metadata = {
-  title: 'ABOUT 윤현삼 | 11년차 현직 초등교사이자 학생드론교육 전문가',
-  description: '11년차 현직 초등교사 윤현삼의 드론 교육 철학과 여정. 교실에서 시작해 2023 FIDA 세계대회 우승팀 코치로 학생들과 함께 성장해 온 이야기를 전합니다.',
+  title: 'ABOUT 윤현삼 | 현직 초등교사이자 학생드론교육 전문가',
+  description: '현직 초등교사 윤현삼의 드론 교육 철학과 여정. 교실에서 시작해 2023 FIDA 세계대회 우승팀 코치로 학생들과 함께 성장해 온 이야기를 전합니다.',
 };
 
 export default function AboutPage() {
@@ -42,7 +42,7 @@ export default function AboutPage() {
   ];
 
   const keywords = [
-    '11년차 초등교육',
+    '초등 교육과정 전문가',
     '학생드론교육',
     '드론코딩',
     '드론촬영',
@@ -55,7 +55,7 @@ export default function AboutPage() {
   ];
 
   const careerHighlights = [
-    { period: '2014 — 현재', text: '초등학교 정규 교사 (11년차 현직 교사)' },
+    { period: '2014 — 현재', text: '초등학교 정규 교사 (현직 초등교사)' },
     { period: '2022 — 현재', text: 'DRONEDAMOI 드론교육연구소 대표 및 연구책임' },
     { period: '2023.11', text: '2023 1st FIDA World Championship Class 20 우승팀 Coach (학생 지도)' },
     { period: '2023.10', text: '교육감배 학교스포츠클럽 드론축구대회 학생팀 지도 우승' },
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-6 text-base sm:text-xl text-slate-300 leading-relaxed text-balance">
-              11년차 현직 초등학교 교사의 시선으로, 드론을 통해 아이들의 무한한 가능성을 교실에서 세계무대로 띄워 올립니다.
+              현직 초등학교 교사의 시선으로, 드론을 통해 아이들의 무한한 가능성을 교실에서 세계무대로 띄워 올립니다.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                     fallbackCategory="YOON HYUN SAM"
-                    fallbackTitle="11년차 초등교사 · 드론교육 전문가"
+                    fallbackTitle="현직 초등교사 · 드론교육 전문가"
                     fallbackIcon="award"
                   />
                   <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#081526] via-[#081526]/80 to-transparent text-white">

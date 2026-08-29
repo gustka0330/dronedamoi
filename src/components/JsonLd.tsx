@@ -8,7 +8,7 @@ export function JsonLd() {
     name: '윤현삼',
     alternateName: 'Yoon Hyun Sam',
     jobTitle: 'Elementary School Teacher / Student Drone Education Specialist',
-    description: '11년차 현직 초등학교 교사이자 학생드론교육 전문가. 2023 FIDA World Championship Class 20 세계대회 우승팀 코치.',
+    description: '현직 초등학교 교사이자 학생드론교육 전문가. 2023 FIDA World Championship Class 20 세계대회 우승팀 코치.',
     url: siteConfig.url,
     sameAs: [
       siteConfig.social.instagram,
