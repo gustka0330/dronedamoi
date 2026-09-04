@@ -163,6 +163,34 @@ export default function AboutPage() {
                     비행 속에서 학생들이 겪는 도전과 실패, 그리고 친구와 함께 문제를 해결해 나가는 배움의 과정입니다.
                   </p>
                 </div>
+
+                {/* Classroom Drone Class Illustration Showcase */}
+                <div className="mt-8 relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950 group">
+                  <div className="relative aspect-[16/9] w-full">
+                    <ImageWithFallback
+                      src="/images/about-classroom.jpg"
+                      alt="드론 교육 수업 현장 - 칠판과 드론 비행원리 설명"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover object-[25%_25%] group-hover:scale-105 transition-transform duration-500"
+                      fallbackCategory="CLASSROOM"
+                      fallbackTitle="드론 교육 현장 스케치"
+                      fallbackIcon="drone"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-4 left-5 right-5 text-white flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-xs font-bold text-slate-200">
+                          교실에서 시작된 학생 중심 드론 비행 & 코딩 수업 현장
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-medium text-slate-300 hidden sm:inline-block bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-full border border-white/10">
+                        DRONEDAMOI
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* 4 Story Chapters */}
