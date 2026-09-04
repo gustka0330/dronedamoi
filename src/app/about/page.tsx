@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Award, BookOpen, HeartHandshake, Sparkles, Trophy, Compass } from 'lucide-react';
+import { Award, BookOpen, HeartHandshake, Sparkles, Trophy, Compass, GraduationCap, Briefcase, Presentation, FileCheck } from 'lucide-react';
 import { ImageWithFallback } from '@/components/ImageWithFallback';
 import { CTASection } from '@/components/CTASection';
 
@@ -54,13 +54,57 @@ export default function AboutPage() {
     '미래 모빌리티 교육',
   ];
 
-  const careerHighlights = [
-    { period: '2014 — 현재', text: '초등학교 정규 교사 (현직 초등교사)' },
-    { period: '2022 — 현재', text: 'DRONEDAMOI 드론교육연구소 대표 및 연구책임' },
-    { period: '2023.11', text: '2023 1st FIDA World Championship Class 20 우승팀 Coach (학생 지도)' },
-    { period: '2023.10', text: '교육감배 학교스포츠클럽 드론축구대회 학생팀 지도 우승' },
-    { period: '2022 — 2024', text: '국토교통부장관배/기 유소년 전국드론축구대회 학생 선수단 지도' },
-    { period: '2022 — 현재', text: '교육청 및 교육지원청 초·중등 교원 드론 직무연수 전문 강사' },
+  // 학력 및 자격
+  const educationAndCerts = [
+    { title: '학력', desc: '진주교육대학교 음악교육 학사 / 국립경상대학교 교육대학원 교육심리 및 교육상담 석사' },
+    { title: '석사 논문', desc: '초등학교 고학년 학생들의 친사회적 행동과 학교생활적응이 사회적 안녕감에 미치는 영향: 학급의 또래관계 연결성의 상호작용' },
+    { title: '국가 및 전문 자격', desc: '초경량비행장치 조종자 무인멀티콥터 1종 취득 · 드론축구 지도자 3급 · 드론축구 심판 3급' },
+  ];
+
+  // 주요 직책 및 전문 위원
+  const keyRoles = [
+    { period: '2024 — 현재', text: '서남초등학교 교사' },
+    { period: '2022 — 현재', text: '드론교육연구회-드론다모이(DRONEDAMOI) 대표 및 운영' },
+    { period: '2024 — 현재', text: '(사)대한드론축구협회 양산유소년지부장' },
+    { period: '2024 — 현재', text: '지딜(G-DEAL: 경상디지털교육자연합) 드론스쿨 리더' },
+    { period: '2023 — 현재', text: '찾아가는 전문직업인(초등교사/드론축구) 전문 강사' },
+    { period: '2025', text: '초등 장학자료 개발위원' },
+    { period: '2024 — 2025', text: '교육 연수 운영 계획 수립을 위한 외부 T/F 위원' },
+    { period: '2024', text: '교실혁명 선도교사' },
+    { period: '2024', text: '경남교육청 미래교육원 콘텐츠개발 3기 TF위원 (미래모빌리티)' },
+    { period: '2023 — 2024', text: '울산·경남지역혁신플랫폼 스마트제조엔지니어링사업단 AI 주니어 교육프로그램 개발위원' },
+    { period: '2022 — 2023', text: '경남교육청 미래교육모델학교 운영' },
+  ];
+
+  // 수상 및 학생 지도 실적
+  const awardsAndCoaching = [
+    { period: '2023.11', title: '2023 1st FIDA World Championship Class 20 세계대회', desc: '금메달(Gold Medal) 우승팀 지도 (학생 지도 코치)' },
+    { period: '2023.09', title: '제17회 교육감배 학교스포츠클럽 드론축구대회', desc: '우승 지도 (신기초)' },
+    { period: '2022.10', title: '구미시장배 유소년 전국드론축구대회', desc: '대상 수상 지도 (신기초)' },
+    { period: '2022', title: '거창전통시장 드론사진 공모전', desc: '대상 수상' },
+    { period: '2023.2학기', title: '경북드론고등학교', desc: '드론축구 동아리 지도 강사' },
+  ];
+
+  // 교원 직무연수 및 대외 출강 이력
+  const lectureHistory = [
+    { period: '2025.01', text: '경상북도교육청연수원 중등디지털교육직무연수 1기 (드론촬영과 영상편집) 강사' },
+    { period: '2024.12', text: '서창초등학교 디지털 한마당 강사 출강' },
+    { period: '2024.12', text: '초·중등 영어교사 교실수업 개선 역량강화 연수 강사 출강' },
+    { period: '2024.12', text: '경남교육연수원 운영성과보고회 체험부스 운영' },
+    { period: '2024.12', text: '거창고등학교 디지털 역량 강화 연수 강사 출강' },
+    { period: '2024.11', text: '경상고등학교 배움중심 전문적학습공동체 강사 출강' },
+    { period: '2024.10', text: '경상남도교육청교육연수원 직무연수 다담(2기) 강사' },
+    { period: '2024.10', text: '경상고등학교 드론스쿨 강사 출강' },
+    { period: '2024.10', text: '경상북도교육청연수원 하반기교원정보화직무연수 2기 (드론 촬영과 편집) 강사' },
+    { period: '2024.08', text: '에듀플러스 위크 교사연수회: 스마트교육학회 2024 하계페스티벌 강연' },
+    { period: '2024.07', text: '영천초 미래교육 콘텐츠 활용 학생 체험교육 프로그램 강사' },
+    { period: '2024.06', text: '경남교육청 미래교육원 배움누리 프로그램 연수 강사 (미래모빌리티)' },
+    { period: '2024.05', text: '중부초 1학기 교대실습협력학교 강사' },
+    { period: '2024.01', text: '경상북도교육청연수원 동계교원정보화직무연수 1기 (드론코딩과 촬영) 강사' },
+    { period: '2023.11', text: '경상북도교육청연수원 중등 SW-AI교육 관리자 역량강화 직무연수 2기 강사' },
+    { period: '2023.06', text: '경상북도교육청연수원 상반기교원정보화직무연수 2기 강사' },
+    { period: '2023.01', text: '경상북도교육청연수원 동계교원정보화직무연수 (드론축구입문 1~3기) 강사' },
+    { period: '2022.08', text: '경상북도교육청연수원 특수분야 직무연수 (드론축구지도자기본직무연수 2기) 강사' },
   ];
 
   return (
@@ -200,24 +244,87 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Career Highlights Timeline */}
-              <div>
-                <h3 className="text-xl font-extrabold text-[#101828] mb-6 flex items-center gap-2">
-                  <Award className="w-5 h-5 text-blue-600" />
-                  <span>주요 경력 및 지도 이력</span>
-                </h3>
+              {/* Comprehensive Career, Awards, Lectures & Credentials */}
+              <div className="space-y-8">
+                {/* 1. 주요 직책 및 전문 위원 */}
+                <div>
+                  <h3 className="text-xl font-extrabold text-[#101828] mb-4 flex items-center gap-2">
+                    <Briefcase className="w-5 h-5 text-blue-600" />
+                    <span>주요 직책 및 교육 전문 위원</span>
+                  </h3>
+                  <div className="p-6 rounded-2xl bg-[#F5F8FC] border border-[#E4E7EC] space-y-3.5">
+                    {keyRoles.map((role, i) => (
+                      <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 pb-3 border-b border-slate-200/80 last:border-0 last:pb-0">
+                        <span className="text-xs font-extrabold text-blue-600 sm:w-28 shrink-0">
+                          {role.period}
+                        </span>
+                        <span className="text-sm font-semibold text-slate-800">
+                          {role.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-                <div className="p-6 rounded-2xl bg-[#F5F8FC] border border-[#E4E7EC] space-y-4">
-                  {careerHighlights.map((h, i) => (
-                    <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 pb-3 border-b border-slate-200 last:border-0 last:pb-0">
-                      <span className="text-xs font-extrabold text-blue-600 sm:w-28 shrink-0">
-                        {h.period}
-                      </span>
-                      <span className="text-sm font-semibold text-slate-800">
-                        {h.text}
-                      </span>
-                    </div>
-                  ))}
+                {/* 2. 수상 및 학생 지도 실적 */}
+                <div>
+                  <h3 className="text-xl font-extrabold text-[#101828] mb-4 flex items-center gap-2">
+                    <Trophy className="w-5 h-5 text-amber-500" />
+                    <span>수상 및 학생 지도 실적</span>
+                  </h3>
+                  <div className="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/70 space-y-3.5">
+                    {awardsAndCoaching.map((item, i) => (
+                      <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 pb-3 border-b border-amber-200/50 last:border-0 last:pb-0">
+                        <span className="text-xs font-black text-amber-700 sm:w-24 shrink-0">
+                          {item.period}
+                        </span>
+                        <div className="text-sm">
+                          <span className="font-extrabold text-slate-900">{item.title}</span>
+                          <span className="text-slate-600 font-medium ml-1.5">― {item.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 3. 교원 직무연수 및 대외 강사 출강 이력 */}
+                <div>
+                  <h3 className="text-xl font-extrabold text-[#101828] mb-4 flex items-center gap-2">
+                    <Presentation className="w-5 h-5 text-indigo-600" />
+                    <span>교원 직무연수 및 대외 강사 출강 이력</span>
+                  </h3>
+                  <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3 max-h-[460px] overflow-y-auto pr-3">
+                    {lectureHistory.map((lec, i) => (
+                      <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 pb-2.5 border-b border-slate-100 last:border-0 last:pb-0 text-sm">
+                        <span className="text-xs font-bold text-indigo-600 sm:w-20 shrink-0 font-mono">
+                          {lec.period}
+                        </span>
+                        <span className="text-xs sm:text-sm text-slate-700 font-medium">
+                          {lec.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 4. 학력, 연구 및 보유 자격 */}
+                <div>
+                  <h3 className="text-xl font-extrabold text-[#101828] mb-4 flex items-center gap-2">
+                    <GraduationCap className="w-5 h-5 text-emerald-600" />
+                    <span>학력, 학술 연구 및 전문 자격</span>
+                  </h3>
+                  <div className="p-6 rounded-2xl bg-emerald-50/40 border border-emerald-200/60 space-y-3.5">
+                    {educationAndCerts.map((ec, i) => (
+                      <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 pb-3 border-b border-emerald-100 last:border-0 last:pb-0">
+                        <span className="text-xs font-black text-emerald-700 sm:w-32 shrink-0">
+                          {ec.title}
+                        </span>
+                        <span className="text-sm font-medium text-slate-800 leading-relaxed">
+                          {ec.desc}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
