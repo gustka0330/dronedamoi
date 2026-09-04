@@ -71,7 +71,7 @@ export default function AdminLoginPage({ searchParams }: LoginPageProps) {
             </div>
             <div className="text-xs text-slate-300">
               <p className="font-bold text-white">보안 인증 권한 계정</p>
-              <p className="text-sky-300 font-semibold mt-0.5">dronedamoi@gmail.com / gustka0330@gmail.com</p>
+              <p className="text-sky-300 font-semibold mt-0.5">gustka0330@dronedamoi.com</p>
             </div>
           </div>
 
@@ -145,7 +145,7 @@ export default function AdminLoginPage({ searchParams }: LoginPageProps) {
               ) : (
                 <Sparkles className="w-4 h-4 text-sky-400" />
               )}
-              <span>dronedamoi@gmail.com 관리자 인증 입장</span>
+              <span>gustka0330@dronedamoi.com 관리자 인증 입장</span>
             </button>
           </div>
         </div>

@@ -14,7 +14,7 @@ export const siteConfig = {
     youtube: 'https://www.youtube.com/@dronedamoi_droneschool/videos',
   },
   contact: {
-    email: 'dronedamoi@gmail.com',
+    email: 'gustka0330@dronedamoi.com',
     location: '경상남도 / 전국 출강 가능',
   },
   stats: [
