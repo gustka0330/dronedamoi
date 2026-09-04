@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowRight, Plane } from 'lucide-react';
+import { Menu, X, Plane } from 'lucide-react';
 import { InstagramIcon, YoutubeIcon } from '@/components/Icons';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -80,47 +80,30 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right Actions (SNS + CTA) */}
-          <div className="hidden sm:flex items-center gap-3">
-            <div className="flex items-center gap-1.5 border-r border-slate-200 pr-3">
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-pink-600 hover:bg-pink-50 transition-colors"
-                aria-label="DRONEDAMOI 인스타그램 바로가기 (새 창)"
-              >
-                <InstagramIcon className="w-4.5 h-4.5" />
-              </a>
-              <a
-                href={siteConfig.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-red-600 hover:bg-red-50 transition-colors"
-                aria-label="DRONEDAMOI 유튜브 채널 바로가기 (새 창)"
-              >
-                <YoutubeIcon className="w-5 h-5" />
-              </a>
-            </div>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-4.5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-sm shadow-blue-500/25 hover:shadow-md hover:shadow-blue-500/30 active:scale-[0.98] transition-all"
+          {/* Right Actions (SNS Links) */}
+          <div className="hidden sm:flex items-center gap-2">
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-pink-600 hover:bg-pink-50 transition-colors"
+              aria-label="DRONEDAMOI 인스타그램 바로가기 (새 창)"
             >
-              <span>교육·연수 문의</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <InstagramIcon className="w-4.5 h-4.5" />
+            </a>
+            <a
+              href={siteConfig.social.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-red-600 hover:bg-red-50 transition-colors"
+              aria-label="DRONEDAMOI 유튜브 채널 바로가기 (새 창)"
+            >
+              <YoutubeIcon className="w-5 h-5" />
+            </a>
           </div>
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <Link
-              href="/contact"
-              onClick={closeMobileMenu}
-              className="sm:hidden px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-bold"
-            >
-              문의하기
-            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -161,36 +144,25 @@ export function Header() {
             })}
           </div>
 
-          <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col gap-3">
-            <Link
-              href="/contact"
-              onClick={closeMobileMenu}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 text-white font-bold shadow-md shadow-blue-500/20"
+          <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-8">
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-pink-600"
             >
-              <span>교육·연수 문의하기</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <div className="flex items-center justify-center gap-6 pt-2">
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-pink-600"
-              >
-                <InstagramIcon className="w-4 h-4 text-pink-500" />
-                <span>Instagram</span>
-              </a>
-              <a
-                href={siteConfig.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-red-600"
-              >
-                <YoutubeIcon className="w-4 h-4 text-red-500" />
-                <span>YouTube</span>
-              </a>
-            </div>
+              <InstagramIcon className="w-4.5 h-4.5 text-pink-500" />
+              <span>Instagram</span>
+            </a>
+            <a
+              href={siteConfig.social.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-red-600"
+            >
+              <YoutubeIcon className="w-4.5 h-4.5 text-red-500" />
+              <span>YouTube</span>
+            </a>
           </div>
         </div>
       )}
