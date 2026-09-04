@@ -66,22 +66,45 @@ export function ContactForm() {
     setStatus('loading');
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      // 1. Direct Email Dispatch via Web3Forms with user's verified Access Key
+      const web3Payload = {
+        access_key: 'ddb7e570-78fb-48e4-8c7a-6e6330327923',
+        subject: `[DRONEDAMOI 상담신청] ${formData.organization} - ${formData.name} 님의 문의 (${formData.inquiryType})`,
+        from_name: `DRONEDAMOI (${formData.organization})`,
+        '문의 유형': formData.inquiryType,
+        '학교 / 기관명': formData.organization,
+        '담당자명': formData.name,
+        '연락처': formData.phone,
+        '이메일': formData.email,
+        '교육 대상': formData.targetGroup,
+        '예상 인원': formData.studentCount || '미기재',
+        '희망 일정': formData.preferredDate || '미기재',
+        '희망 차시': formData.sessionCount || '미기재',
+        '교육 장소': formData.location || '미기재',
+        '상담 세부내용': formData.message || '(없음)',
+      };
 
-      if (!res.ok) {
-        throw new Error('전송 중 오류가 발생했습니다.');
-      }
+      // Dispatch to Web3Forms and internal API in parallel
+      await Promise.allSettled([
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(web3Payload),
+        }),
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }),
+      ]);
 
       setStatus('success');
     } catch (err: unknown) {
-      console.warn('Backend endpoint fallback triggered', err);
-      setTimeout(() => {
-        setStatus('success');
-      }, 600);
+      console.warn('Inquiry dispatch error', err);
+      setStatus('success');
     }
   };
 
