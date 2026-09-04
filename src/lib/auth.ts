@@ -2,7 +2,7 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
 export const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'gustka0330@gmail.com';
-export const ALLOWED_ADMIN_EMAILS = [ADMIN_EMAIL, 'gustka0330@gmail.com'];
+export const ALLOWED_ADMIN_EMAILS = [ADMIN_EMAIL, 'gustka0330@gmail.com', 'dronedamoi@gmail.com'];
 
 const SECRET_KEY = new TextEncoder().encode(
   process.env.ADMIN_SESSION_SECRET || 'dronedamoi-super-secret-jwt-key-2026-yoon-hyun-sam-secure'
