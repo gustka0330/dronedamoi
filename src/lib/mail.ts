@@ -185,7 +185,7 @@ export async function sendInquiryNotification(data: InquiryPayload): Promise<{ s
 
   // 3. Fallback: Web3Forms API (Direct web notification without requiring server credentials)
   try {
-    const web3Key = process.env.WEB3FORMS_ACCESS_KEY || 'a88c2299-4d92-4ce0-a292-d96bb0e0d5ba'; // Public default key or fallback
+    const web3Key = process.env.WEB3FORMS_ACCESS_KEY || '83a81660-a57a-4c08-823e-bc88a398b1e6';
     const formRes = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

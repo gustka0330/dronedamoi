@@ -68,7 +68,7 @@ export function ContactForm() {
     try {
       // 1. Direct Email Dispatch via Web3Forms with user's verified Access Key
       const web3Payload = {
-        access_key: 'ddb7e570-78fb-48e4-8c7a-6e6330327923',
+        access_key: '83a81660-a57a-4c08-823e-bc88a398b1e6',
         subject: `[DRONEDAMOI 상담신청] ${formData.organization} - ${formData.name} 님의 문의 (${formData.inquiryType})`,
         from_name: `DRONEDAMOI (${formData.organization})`,
         '문의 유형': formData.inquiryType,
