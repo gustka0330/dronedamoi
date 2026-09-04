@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { sendInquiryNotification, TARGET_EMAIL } from '@/lib/mail';
 
 export async function POST(request: Request) {
   try {
@@ -22,22 +23,19 @@ export async function POST(request: Request) {
     // Basic validation
     if (!name || !email || !phone || !organization || !privacyAgreed) {
       return NextResponse.json(
-        { error: '필수 입력 항목이 누락되었습니다.' },
+        { error: '필수 입력 항목(기관명, 이름, 이메일, 연락처, 개인정보 동의)이 누락되었습니다.' },
         { status: 400 }
       );
     }
 
-    // In a production setup with Supabase / Email service:
-    // e.g. await supabase.from('inquiries').insert([body])
-    // or send email via Resend / Nodemailer
-    console.log('[DRONEDAMOI Inquiry Received]:', {
-      timestamp: new Date().toISOString(),
-      inquiryType,
+    // Send real email notification
+    const emailResult = await sendInquiryNotification({
+      inquiryType: inquiryType || '학생 드론교육',
       organization,
       name,
       email,
       phone,
-      targetGroup,
+      targetGroup: targetGroup || '초등학생',
       studentCount,
       preferredDate,
       sessionCount,
@@ -45,10 +43,21 @@ export async function POST(request: Request) {
       message,
     });
 
+    console.log('[DRONEDAMOI Inquiry Received & Dispatched]:', {
+      timestamp: new Date().toISOString(),
+      organization,
+      name,
+      email,
+      phone,
+      recipient: TARGET_EMAIL,
+      emailResult,
+    });
+
     return NextResponse.json(
       {
         success: true,
-        message: '교육 문의가 성공적으로 접수되었습니다.',
+        message: '교육 문의가 성공적으로 접수되어 담당자에게 이메일로 발송되었습니다.',
+        delivery: emailResult,
       },
       { status: 200 }
     );
